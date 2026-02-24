@@ -30,7 +30,7 @@ def beauty():
     orange_fill = PatternFill(start_color="FFA500", end_color="FFA500", fill_type="solid")
 
     ws.conditional_formatting.add(
-        "B2:C100",
+        "B2:B100",
         FormulaRule(formula=["B2=7"], fill=orange_fill)
     )
 
