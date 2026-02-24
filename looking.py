@@ -27,15 +27,21 @@ def beauty():
 
     green_fill = PatternFill(start_color="C6EFCE", end_color="C6EFCE", fill_type="solid")
     gray_fill = PatternFill(start_color="EEEEEE", end_color="EEEEEE", fill_type="solid")
+    orange_fill = PatternFill(start_color="FFA500", end_color="FFA500", fill_type="solid")
 
     ws.conditional_formatting.add(
-        "D3:Z100",
-        FormulaRule(formula=['D3="(^_^)"'], fill=green_fill)
+        "C2:C100",
+        FormulaRule(formula=["C2=7"], fill=orange_fill)
     )
 
     ws.conditional_formatting.add(
-        "D3:Z100",
-        FormulaRule(formula=['D3="(~~~)"'], fill=gray_fill)
+        "D2:Z100",
+        FormulaRule(formula=['D2="(^_^)"'], fill=green_fill)
+    )
+
+    ws.conditional_formatting.add(
+        "D2:Z100",
+        FormulaRule(formula=['D2="(~~~)"'], fill=gray_fill)
     )
 
     thin = Side(style="thin")
