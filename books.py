@@ -96,7 +96,7 @@ def parse_checkin(text: str) -> Dict[str, Optional[object]]:
     book, chapters = extract_book_and_chapter(text)
 
     # -------- 人名 --------
-    status_tail = r'(?:\s*(?:✓|已读|已讀|补|補|补读))+\s*$'
+    status_tail = r'(?:\s*(?:✓|已读|已讀|补|補|补读|己读))+\s*$'
     names: List[str] = []
 
     for m in re.finditer(r'^\s*\d+\.\s*(.+?)\s*$', text, flags=re.M):
