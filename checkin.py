@@ -13,8 +13,7 @@ for day in days:
     with open(day) as f:
         text = f.read()
     parsed = parse(text)
-    date = parsed["date"]
-    chapters = parsed["book"] + parsed["chapters"]
+    chapters = parsed["date"] + '\n' + parsed["book"] + parsed["chapters"]
     names = parsed["names"]
 
     merge(file_path = "result.xlsx",

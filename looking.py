@@ -15,13 +15,14 @@ def beauty():
     # 1️⃣ 全部单元格居中 + 楷体
     for row in ws.iter_rows():
         for cell in row:
-            cell.alignment = Alignment(horizontal="center", vertical="center")
+            cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
             cell.font = Font(name="楷体", size=12)
 
     # 2️⃣ 设置列宽
     ws.column_dimensions["A"].width = 14  # 姓名列宽
     ws.column_dimensions["B"].width = 6
     ws.column_dimensions["C"].width = 6
+    ws.row_dimensions[1].height = 30
     for col in range(4, ws.max_column + 1):
         ws.column_dimensions[chr(64 + col)].width = 16
 
